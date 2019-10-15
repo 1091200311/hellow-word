@@ -9,7 +9,7 @@ if(curl){
 curl_easy_setopt(curl,CURLOPT_URL,"https://myip.ipip.net/");
 res=curl_easy_perform(curl);
 if(res!=CURL_OK)
-printf(stderr,"curl_easy_perform()failed:%d\n",curl_easy_strerror(res));
+fprintf(stderr,"curl_easy_perform()failed:%d\n",curl_easy_strerror(res));
 curl_easy_cleanup(curl);
 }
 return 0;
